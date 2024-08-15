@@ -10,8 +10,13 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  @include respond(phone) {
+    text-align: center;
+  }
+
   &__content {
     @include absCenter;
+    transform: translate(-50%, -50%) scale(0.25);
     width: 75%;
     background-color: $color-white;
     box-sizing: 0 2rem 4rem rgba($color-black, 0.2);
@@ -19,13 +24,19 @@
     display: table;
     overflow: hidden;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.5s 0.2s;
+
+    @include respond(phone) {
+      display: block;
+    }
   }
 
   &__left {
     width: 33.3333333333%;
     display: table-cell;
+    @include respond(tab-land) {
+      display: none;
+    }
   }
 
   &__right {
@@ -46,6 +57,10 @@
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
     hyphens: auto;
+
+    @include respond(phone) {
+      column-count: 1;
+    }
   }
   &:target {
     opacity: 1;
