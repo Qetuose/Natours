@@ -1,3 +1,6 @@
 node_modules
 dist
 .parcel-cache
+icon-font.css
+main.concat.css
+main.prefix.css
