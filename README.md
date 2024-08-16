@@ -2,7 +2,7 @@
 
 Landing page for imaginary company "Natours".
 
-#Installation
+# Installation
 
 - Install packages `npm install`
 - Development  `npm run start`
